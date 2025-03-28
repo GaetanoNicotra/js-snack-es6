@@ -67,28 +67,44 @@ I punti fatti e i falli subiti saranno generati randomicamente*/
 const teams = [
     {
         name: 'Juventus',
+        punti: 0,
+        falli: 0
     },
     {
         name: 'Milan',
+        punti: 0,
+        falli: 0
 
     },
     {
         name: 'Catania',
+        punti: 0,
+        falli: 0
     },
     {
         name: 'Napoli',
+        punti: 0,
+        falli: 0
     },
     {
         name: 'Inter',
+        punti: 0,
+        falli: 0
     },
     {
         name: 'Atalanta',
+        punti: 0,
+        falli: 0
     },
     {
         name: 'Roma',
+        punti: 0,
+        falli: 0
     },
     {
         name: 'Lazio',
+        punti: 0,
+        falli: 0
     }
 ]
 
@@ -104,3 +120,13 @@ for (let i = 0; i < teams.length; i++) {
     teams[i].falli = randomNumbers()
 }
 console.log(teams)
+
+// voglio cereare un nuovo array che contenga solo i nomi delle squadre e i falli 
+// creo l'array vuoto
+const namesAndFail = []
+// creo un ciclo che inserisca all'interno dell'array vuoto le propietà name e falli
+for (let i = 0; i < teams.length; i++) {
+    namesAndFail.push({ name: teams[i].name, falli: teams[i].falli })
+}
+// stampo il risultato in console
+console.log(namesAndFail)
