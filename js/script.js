@@ -67,56 +67,40 @@ I punti fatti e i falli subiti saranno generati randomicamente*/
 const teams = [
     {
         name: 'Juventus',
-        punti: 0,
-        falli: 0
     },
     {
         name: 'Milan',
-        punti: 0,
-        falli: 0
 
     },
     {
         name: 'Catania',
-        punti: 0,
-        falli: 0
     },
     {
         name: 'Napoli',
-        punti: 0,
-        falli: 0
     },
     {
         name: 'Inter',
-        punti: 0,
-        falli: 0
     },
     {
         name: 'Atalanta',
-        punti: 0,
-        falli: 0
     },
     {
         name: 'Roma',
-        punti: 0,
-        falli: 0
     },
     {
         name: 'Lazio',
-        punti: 0,
-        falli: 0
     }
 ]
 
-console.log(teams)
 
 // creo la funzione che genererà i numeri randomici
-const randomNumbers = (minimo, massimo) => {
-    return Math.floor(Math.random() * (massimo - minimo + 1)) + minimo;
-
+const randomNumbers = () => {
+    return Math.floor(Math.random() * (110 - 1 + 1)) + 1;
 }
 
-const puntiRandom = randomNumbers(1, 97)
-const falliRandom = randomNumbers(1, 335)
-console.log(puntiRandom)
-console.log(falliRandom)
+// creo un ciclo per inserire a ciascuna squadra le propietà punti subiti e falli, con all'interno i numeri randomici
+for (let i = 0; i < teams.length; i++) {
+    teams[i].punti = randomNumbers()
+    teams[i].falli = randomNumbers()
+}
+console.log(teams)
