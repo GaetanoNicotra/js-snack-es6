@@ -41,9 +41,13 @@ const roadBike = [
 // creo un ciclo for
 
 // dichiaro una variabile che conterrà il peso minore
-let min = [];
+let min = roadBike[0].weight;
+let minWeight;
 for (let i = 0; i < roadBike.length; i++) {
-    min.push(roadBike[i].weight)
-    //console.log()
-    console.log(min)
+
+    if (min > roadBike[i].weight) {
+        minWeight = roadBike[i];
+        min = roadBike[i].weight;
+    }
 }
+console.log(minWeight)
