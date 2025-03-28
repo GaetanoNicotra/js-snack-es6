@@ -1,6 +1,6 @@
 // SNACK NUMERO 1: BICICLETTE
 
-// Creo un array di oggetti che conterrà il nome e il peso di 8 biciclette
+// Creo un array di oggetti che conterrà il nome e il peso di 8 biciclette da corsa
 
 const roadBike = [
     {
@@ -56,7 +56,7 @@ for (let i = 0; i < roadBike.length; i++) {
 // stampo il risultato in console
 console.log(minWeight)
 
-
+//--------------------------------------------------------------//
 
 // SNACK NUMERO 2: SQUADRE DI CALCIO
 
@@ -74,7 +74,7 @@ const teams = [
         name: 'Milan',
         punti: 0,
         falli: 0
-        
+
     },
     {
         name: 'Catania',
@@ -109,3 +109,14 @@ const teams = [
 ]
 
 console.log(teams)
+
+// creo la funzione che genererà i numeri randomici
+const randomNumbers = (minimo, massimo) => {
+    return Math.floor(Math.random() * (massimo - minimo + 1)) + minimo;
+
+}
+
+const puntiRandom = randomNumbers(1, 97)
+const falliRandom = randomNumbers(1, 335)
+console.log(puntiRandom)
+console.log(falliRandom)
