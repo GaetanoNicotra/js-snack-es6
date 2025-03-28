@@ -36,3 +36,14 @@ const roadBike = [
         weight: 5.9
     }
 ]
+
+// voglio stampare in console la bici con il peso minore
+// creo un ciclo for
+
+// dichiaro una variabile che conterrà il peso minore
+let min = [];
+for (let i = 0; i < roadBike.length; i++) {
+    min.push(roadBike[i].weight)
+    //console.log()
+    console.log(min)
+}
